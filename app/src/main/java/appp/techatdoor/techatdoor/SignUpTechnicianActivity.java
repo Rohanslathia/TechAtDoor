@@ -1,10 +1,10 @@
 package appp.techatdoor.techatdoor;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
 
-public class signup_technician extends AppCompatActivity {
+import androidx.appcompat.app.AppCompatActivity;
+
+public class SignUpTechnicianActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
