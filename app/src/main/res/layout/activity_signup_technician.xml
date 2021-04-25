@@ -1,112 +1,122 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@drawable/bg1"
-    tools:context=".signup_technician">
-    <ImageView
-        android:id="@+id/logo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/techatdoor"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.045" />
+    xmlns:tools="http://schemas.android.com/tools">
 
-    <TextView
-        android:id="@+id/textView_signup"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="35dp"
-        android:layout_marginBottom="404dp"
-        android:fontFamily="sans-serif-black"
-        android:text="SignUp"
-        android:textColor="#846621"
-        android:textSize="50dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/logo"
-        app:layout_constraintVertical_bias="0.0" />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg1"
+        tools:context=".SignUpTechnicianActivity">
 
-    <ImageView
-        android:id="@+id/text_tech"
-        android:layout_width="82dp"
-        android:layout_height="25dp"
-        android:src="@drawable/technician"
-        app:layout_constraintBottom_toBottomOf="@+id/textView_signup"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/textView_signup"
-        app:layout_constraintTop_toTopOf="@+id/textView_signup"
-        app:layout_constraintVertical_bias="1.0" />
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
-    <EditText
-        android:id="@+id/confirmpass_signuptech"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="92dp"
-        android:ems="10"
-        android:hint="Confirm Password"
-        android:inputType="textPassword"
-        app:layout_constraintBottom_toTopOf="@+id/signup_continue"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.502"
-        app:layout_constraintStart_toStartOf="parent" />
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="50dp">
 
-    <EditText
-        android:id="@+id/username_signuptech"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="20dp"
-        android:ems="10"
-        android:hint="Enter Username"
-        android:inputType="textPersonName"
-        app:layout_constraintBottom_toTopOf="@+id/mobile_signuptech"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.502"
-        app:layout_constraintStart_toStartOf="parent" />
+                <ImageView
+                    android:id="@+id/imgLogo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="40dp"
+                    android:contentDescription="@string/image"
+                    android:src="@drawable/techatdoor"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
-    <EditText
-        android:id="@+id/mobile_signuptech"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="20dp"
-        android:ems="10"
-        android:hint="Enter Mobile"
-        android:inputType="textPersonName"
-        app:layout_constraintBottom_toTopOf="@+id/pass_signuptech"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.502"
-        app:layout_constraintStart_toStartOf="parent" />
+                <TextView
+                    android:id="@+id/txtSignUp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="sans-serif-black"
+                    android:text="@string/sign_up"
+                    android:textColor="#846621"
+                    android:textSize="50sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/imgLogo" />
 
-    <EditText
-        android:id="@+id/pass_signuptech"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="20dp"
-        android:ems="10"
-        android:hint="Enter Password"
-        android:inputType="textPassword"
-        app:layout_constraintBottom_toTopOf="@+id/confirmpass_signuptech"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent" />
+                <ImageView
+                    android:id="@+id/text_tech"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/image"
+                    android:src="@drawable/technician"
+                    app:layout_constraintEnd_toEndOf="@id/txtSignUp"
+                    app:layout_constraintTop_toBottomOf="@id/txtSignUp" />
 
-    <Button
-        android:id="@+id/signup_continue"
-        android:layout_width="249dp"
-        android:layout_height="44dp"
-        android:layout_marginTop="356dp"
-        android:text="Continue"
-        app:backgroundTint="#846621"
-        app:cornerRadius="32sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView_signup" />
+                <EditText
+                    android:id="@+id/edtUsername"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginEnd="20dp"
+                    android:hint="@string/username"
+                    android:importantForAutofill="no"
+                    android:inputType="textPersonName"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/txtSignUp" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+                <EditText
+                    android:id="@+id/edtMobile"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:hint="@string/mobile_number"
+                    android:importantForAutofill="no"
+                    android:inputType="textPersonName"
+                    app:layout_constraintEnd_toEndOf="@id/edtUsername"
+                    app:layout_constraintStart_toStartOf="@id/edtUsername"
+                    app:layout_constraintTop_toBottomOf="@id/edtUsername" />
+
+                <EditText
+                    android:id="@+id/edtPassword"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:hint="@string/password"
+                    android:importantForAutofill="no"
+                    android:inputType="textPassword"
+                    app:layout_constraintEnd_toEndOf="@id/edtMobile"
+                    app:layout_constraintStart_toStartOf="@id/edtMobile"
+                    app:layout_constraintTop_toBottomOf="@id/edtMobile" />
+
+                <EditText
+                    android:id="@+id/edtConfirmPassword"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:hint="@string/confirm_password"
+                    android:importantForAutofill="no"
+                    android:inputType="textPassword"
+                    app:layout_constraintEnd_toEndOf="@id/edtPassword"
+                    app:layout_constraintStart_toStartOf="@id/edtPassword"
+                    app:layout_constraintTop_toBottomOf="@id/edtPassword" />
+
+                <Button
+                    android:id="@+id/btnSignUp"
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/login_button_bg"
+                    android:text="@string/btn_continue"
+                    android:textColor="@color/white"
+                    app:layout_constraintEnd_toEndOf="@id/edtConfirmPassword"
+                    app:layout_constraintStart_toStartOf="@id/edtConfirmPassword"
+                    app:layout_constraintTop_toBottomOf="@id/edtConfirmPassword" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </ScrollView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
