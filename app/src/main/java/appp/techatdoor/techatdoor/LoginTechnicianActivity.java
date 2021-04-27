@@ -1,5 +1,6 @@
 package appp.techatdoor.techatdoor;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -15,5 +16,7 @@ public class LoginTechnicianActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         binding = DataBindingUtil.setContentView(this, R.layout.activity_login_technician);
+
+        binding.btnLogin.setOnClickListener(v -> startActivity(new Intent(this, UserDashboardActivity.class)));
     }
 }
