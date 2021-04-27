@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".TechnicianDetailsActivity">
+
+        <ImageView
+            android:id="@+id/imgProfilePicture"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:contentDescription="@string/image"
+            android:src="@color/black"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/techPost"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/login_button_bg"
+            android:paddingStart="40dp"
+            android:paddingEnd="40dp"
+            android:text="Electrician"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="@id/imgProfilePicture"
+            app:layout_constraintStart_toStartOf="@id/imgProfilePicture" />
+
+        <TextView
+            android:id="@+id/techName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:text="Yatharth batra"
+            android:textColor="@color/darkBrown"
+            android:textSize="30sp"
+            app:layout_constraintBottom_toTopOf="@id/techPost"
+            app:layout_constraintStart_toStartOf="@id/techPost" />
+
+        <TextView
+            android:id="@+id/txtWorkExperience"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:text="Work Experience"
+            android:textColor="@color/darkBrown"
+            android:textSize="30sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/imgProfilePicture" />
+
+        <TextView
+            android:id="@+id/workExperience"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            android:text="7 years of work experience in TATA electricals\n2 years of work experience in SparkUp company."
+            android:textColor="@color/darkBrown"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/txtWorkExperience"
+            app:layout_constraintTop_toBottomOf="@id/txtWorkExperience" />
+
+        <Button
+            android:id="@+id/btnHire"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/login_button_bg"
+            android:text="Hire"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/workExperience" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -12,4 +12,5 @@
     <string name="mobile_number">Mobile Number</string>
     <string name="confirm_password">Confirm Password</string>
     <string name="btn_continue">Continue</string>
+    <string name="title_activity_user_dashboard">Map</string>
 </resources>
